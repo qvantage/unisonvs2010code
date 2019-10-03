@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="PeriodIncomeDeductionDS" targetNamespace="http://tempuri.org/PeriodIncomeDeductionDS.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/PeriodIncomeDeductionDS.xsd"
+	xmlns:mstns="http://tempuri.org/PeriodIncomeDeductionDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="PeriodIncomeDeductionDS" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="ADDRESS">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ID" type="xs:int" />
+							<xs:element name="OWNERID" type="xs:int" />
+							<xs:element name="NAME" type="xs:string" minOccurs="0" />
+							<xs:element name="CONTACT" type="xs:string" minOccurs="0" />
+							<xs:element name="STREET" type="xs:string" minOccurs="0" />
+							<xs:element name="STATECODE" type="xs:string" minOccurs="0" />
+							<xs:element name="CITYID" type="xs:int" minOccurs="0" />
+							<xs:element name="ZIPCODE" type="xs:string" minOccurs="0" />
+							<xs:element name="ZIPPLUS" type="xs:string" minOccurs="0" />
+							<xs:element name="PHONE" type="xs:string" minOccurs="0" />
+							<xs:element name="FAX" type="xs:string" minOccurs="0" />
+							<xs:element name="PAGER" type="xs:string" minOccurs="0" />
+							<xs:element name="EXTENSION" type="xs:string" minOccurs="0" />
+							<xs:element name="DIRECTION" type="xs:string" minOccurs="0" />
+							<xs:element name="EMAIL" type="xs:string" minOccurs="0" />
+							<xs:element name="CREATEDATE" type="xs:string" minOccurs="0" />
+							<xs:element name="LASTACTIVEDATE" type="xs:string" minOccurs="0" />
+							<xs:element name="OWNERTYPE" type="xs:string" minOccurs="0" />
+							<xs:element name="SYSTEMID" type="xs:int" minOccurs="0" />
+							<xs:element name="PIN" type="xs:int" minOccurs="0" />
+							<xs:element name="MAPCODE" type="xs:string" minOccurs="0" />
+							<xs:element name="CITYNAME" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:unique name="PeriodIncomeDeductionDSKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:ADDRESS" />
+			<xs:field xpath="mstns:ID" />
+			<xs:field xpath="mstns:OWNERID" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>

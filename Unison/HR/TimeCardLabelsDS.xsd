@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="TimeCardLabelsDS" targetNamespace="http://tempuri.org/TimeCardLabelsDS.xsd"
+	xmlns:mstns="http://tempuri.org/TimeCardLabelsDS.xsd" xmlns="http://tempuri.org/TimeCardLabelsDS.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" xmlns:NameSpace1="urn:schemas-microsoft-com:xml-msdatasource"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="TimeCardLabelsDS" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="TimeCardLabels">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="EmployeeId" type="xs:int" />
+							<xs:element name="EmplName" type="xs:string" />
+							<xs:element name="OfficeId" type="xs:int" />
+							<xs:element name="OfficeName" type="xs:string" />
+							<xs:element name="Company" type="xs:string" />
+							<xs:element name="DeptNo" type="xs:string" />
+							<xs:element name="PayrollEndDate" type="xs:dateTime" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,39 @@
+Customer
+===============================
+Weight Module:
+ID, NAME, CONTACT, STREET, CITYNAME, STATE, ZIPCODE, PHONE1, PHONE2, FAX, PAGER, EXTENSION, EMAIL, Web, CREATEDATE, LASTBillDate, BCycleCode, CREDITLIMIT, COMMENTS, DISCOUNTRATE, SALESID, APPLYRATEINCREASE, GRACEPERIOD, TAXRATE, FuelSURCHARGE, INCREASEDATE, INCREASERATE, FINANCECHARGE, Status, AcctGroupID, SubjHoliday, bNAME, bCONTACT, bSTREET, bCITYNAME, bSTATE, bZIPCODE, bPHONE1, bPHONE2, bFAX, bEMAIL, SamePayAddress, NRVNU, HolidaySvcMj, HolidaySvcMn, HolidayNoticeMj, HolidayNoticeMn
+
+Unison:
+ID, NAME, CONTACT, STREET, Address2, CITYNAME, STATE, ZIPCODE, PHONE1, PHONE2, FAX, PAGER, EXTENSION, EMAIL, Web, CREATEDATE, LASTBillDate, BCycleCode, CREDITLIMIT, COMMENTS, DISCOUNTRATE, SALESID, APPLYRATEINCREASE, GRACEPERIOD, TAXRATE, FuelSURCHARGE, INCREASEDATE, INCREASERATE, FINANCECHARGE, Status, AcctGroupID, SubjHoliday, bNAME, bCONTACT, bSTREET, bCITYNAME, bSTATE, bZIPCODE, bPHONE1, bPHONE2, bFAX, bEMAIL, SamePayAddress, NRVNU, HolidaySvcMj, HolidaySvcMn, HolidayNoticeMj, HolidayNoticeMn, HolidayCommentsMn, CourierCode, LocIDSuffix, MasterCustID, MasterCustName
+
+Insert into netsrv.unison.dbo.customer(ID, NAME, CONTACT, STREET, CITYNAME, STATE, ZIPCODE, PHONE1, PHONE2, FAX, PAGER, EXTENSION, EMAIL, Web, CREATEDATE, LASTBillDate, BCycleCode, CREDITLIMIT, COMMENTS, DISCOUNTRATE, SALESID, APPLYRATEINCREASE, GRACEPERIOD, TAXRATE, FuelSURCHARGE, INCREASEDATE, INCREASERATE, FINANCECHARGE, Status, AcctGroupID, SubjHoliday, bNAME, bCONTACT, bSTREET, bCITYNAME, bSTATE, bZIPCODE, bPHONE1, bPHONE2, bFAX, bEMAIL, SamePayAddress, NRVNU, HolidaySvcMj, HolidaySvcMn, HolidayNoticeMj, HolidayNoticeMn)
+Select * from Customer where id not in (Select ID from netsrv.unison.dbo.customer)
+
+ADDRESS
+===============================
+Weight Module:
+ID, OWNERID, NAME, CONTACT, STREET, STATECODE, CITYID, ZIPCODE, ZIPPLUS, PHONE, FAX, PAGER, EXTENSION, DIRECTION, EMAIL, CREATEDATE, LASTACTIVEDATE, OWNERTYPE, SYSTEMID, PIN, MAPCODE, CITYNAME
+
+Unison:
+RowID, ID, CustomerID, LocationID, NAME, CONTACT, STREET, Address2, CITYNAME, STATECODE, ZIPCODE, ZIPPLUS, PHONE, PHONE2, FAX, EXTENSION, DIRECTION, EMAIL, CREATEDATE, MAPCODE, ACTIVE, WEB_PASSWORD
+
+Insert into netsrv.unison.dbo.Address(ID, CustomerID, LocationID, NAME, CONTACT, STREET, CITYNAME, STATECODE, ZIPCODE, ZIPPLUS, PHONE, FAX, EXTENSION, DIRECTION, EMAIL, CREATEDATE, ACTIVE)
+Select a.ID, OwnerID, substring(a.Name, 1, 4) as LocationID, a.NAME, isnull(CONTACT, '') as Contact, STREET, ct.Name as CITYNAME, a.STATECODE, a.ZIPCODE, isnull(a.ZIPPLUS, '') as ZipPlus, PHONE, isnull(FAX, '') as Fax, isnull(EXTENSION, '') as Extension, isnull(DIRECTION, '') as Direction, isnull(EMAIL, '') as Email, CREATEDATE, 'Y' as ACTIVE 
+from Address a left outer join city ct on a.zipcode = ct.zipcode
+where ct.name is not null
+-- There is no need for Address table in Weight Module.
+
+
+DAILYENTRY
+===============================
+Weight Module:
+TranDate, ManifestID, OfficeID, AccountID, AccountName, ManifestName, Weight, WeightLimit, OWCharge, Charge, Finalize, WeightPlanGroupID, WeightPlanGroup, ParentID, [Invoice No]
+
+UNISON:
+TranDate, ManifestID, OfficeID, AccountID, AccountName, ManifestName, Weight, WeightLimit, OWCharge, Charge, Finalize, WeightPlanGroupID, WeightPlanGroup, ParentID, [Invoice No]
+
+GroupClubMembers
+==============================
+insert into netsrv.unison.dbo.groupclubmembers(GroupId, ClubID, MemberID, Member_Name)
+Select 'W' as GroupID, AcctGroupID as ClubID, ID as MemberID, Name as Member_Name from Customer where AcctGroupID is not Null
+

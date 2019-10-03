@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+
+
+  <xs:schema id="SERVICEOFFICES" targetNamespace="http://tempuri.org/SERVICEOFFICES.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/SERVICEOFFICES.xsd"
+	xmlns:mstns="http://tempuri.org/SERVICEOFFICES.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="SERVICEOFFICES" msdata:IsDataSet="true" >
+      <xs:complexType>
+        <xs:choice  maxOccurs="unbounded">
+          <xs:element name="SERVICEOFFICES" >
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ID"  type="xs:int" />
+                <xs:element name="NAME" type="xs:string" />
+                <xs:element name="Contact"   type="xs:string" />
+                <xs:element name="STREET"  type="xs:dateTime" />
+                <xs:element name="Address2"  type="xs:string" />
+                <xs:element name="CITY"  type="xs:dateTime"  />
+                <xs:element name="STATE"   type="xs:string" />
+                <xs:element name="ZIPCODE" type="xs:string" />
+                <xs:element name="PHONE1"  type="xs:string"  />
+                <xs:element name="PHONE2" type="xs:string" />
+                <xs:element name="FAX"  type="xs:string" />
+                <xs:element name="EMAIL"  type="xs:string"  />
+                <xs:element name="WEB"  type="xs:string" />
+                <xs:element name="Territory"  type="xs:string" />
+                <xs:element name="RegionID"  type="xs:string"  />
+                <xs:element name="Password" type="xs:string"  />
+                <xs:element name="CustomerID"  type="xs:string"  />
+                <xs:element name="Active" type="xs:string"  />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TimeCardEventsAnalysisDS" targetNamespace="http://tempuri.org/TimeCardEventsAnalysisDS.xsd" 
+	xmlns:mstns="http://tempuri.org/TimeCardEventsAnalysisDS.xsd" xmlns="http://tempuri.org/TimeCardEventsAnalysisDS.xsd" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" 
+	xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="TimeCardEventsAnalysisDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="TimeCardEventsAnalysisDS" msprop:Generator_DataSetName="TimeCardEventsAnalysisDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TimeCardEventsAnalysis" msprop:Generator_UserTableName="TimeCardEventsAnalysis" msprop:Generator_RowDeletedName="TimeCardEventsAnalysisRowDeleted" msprop:Generator_TableClassName="TimeCardEventsAnalysisDataTable" msprop:Generator_RowChangedName="TimeCardEventsAnalysisRowChanged" msprop:Generator_RowClassName="TimeCardEventsAnalysisRow" msprop:Generator_RowChangingName="TimeCardEventsAnalysisRowChanging" msprop:Generator_RowEvArgName="TimeCardEventsAnalysisRowChangeEvent" msprop:Generator_RowEvHandlerName="TimeCardEventsAnalysisRowChangeEventHandler" msprop:Generator_TablePropName="TimeCardEventsAnalysis" msprop:Generator_TableVarName="tableTimeCardEventsAnalysis" msprop:Generator_RowDeletingName="TimeCardEventsAnalysisRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RowId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="RowId" msprop:Generator_ColumnPropNameInRow="RowId" msprop:Generator_ColumnVarNameInTable="columnRowId" msprop:Generator_ColumnPropNameInTable="RowIdColumn" type="xs:int" />
+              <xs:element name="EmployeeId" msprop:Generator_UserColumnName="EmployeeId" msprop:Generator_ColumnPropNameInRow="EmployeeId" msprop:Generator_ColumnVarNameInTable="columnEmployeeId" msprop:Generator_ColumnPropNameInTable="EmployeeIdColumn" type="xs:int" />
+              <xs:element name="FirstName" msprop:Generator_UserColumnName="FirstName" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_ColumnVarNameInTable="columnFirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MiddleName" msprop:Generator_UserColumnName="MiddleName" msprop:Generator_ColumnPropNameInRow="MiddleName" msprop:Generator_ColumnVarNameInTable="columnMiddleName" msprop:Generator_ColumnPropNameInTable="MiddleNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LastName" msprop:Generator_UserColumnName="LastName" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_ColumnVarNameInTable="columnLastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Division" msprop:Generator_UserColumnName="Division" msprop:Generator_ColumnPropNameInRow="Division" msprop:Generator_ColumnVarNameInTable="columnDivision" msprop:Generator_ColumnPropNameInTable="DivisionColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Office" msprop:Generator_UserColumnName="Office" msprop:Generator_ColumnPropNameInRow="Office" msprop:Generator_ColumnVarNameInTable="columnOffice" msprop:Generator_ColumnPropNameInTable="OfficeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WorkDate" msprop:Generator_UserColumnName="WorkDate" msprop:Generator_ColumnPropNameInRow="WorkDate" msprop:Generator_ColumnVarNameInTable="columnWorkDate" msprop:Generator_ColumnPropNameInTable="WorkDateColumn" type="xs:dateTime" />
+              <xs:element name="PeriodHours" msprop:Generator_UserColumnName="PeriodHours" msprop:Generator_ColumnPropNameInRow="PeriodHours" msprop:Generator_ColumnVarNameInTable="columnPeriodHours" msprop:Generator_ColumnPropNameInTable="PeriodHoursColumn" type="xs:decimal" />
+              <xs:element name="HoursCategory" msprop:Generator_UserColumnName="HoursCategory" msprop:Generator_ColumnPropNameInRow="HoursCategory" msprop:Generator_ColumnVarNameInTable="columnHoursCategory" msprop:Generator_ColumnPropNameInTable="HoursCategoryColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WeekEnding" msprop:Generator_UserColumnName="WeekEnding" msprop:Generator_ColumnPropNameInRow="WeekEnding" msprop:Generator_ColumnVarNameInTable="columnWeekEnding" msprop:Generator_ColumnPropNameInTable="WeekEndingColumn" type="xs:dateTime" />
+              <xs:element name="PayrollEnding" msprop:Generator_UserColumnName="PayrollEnding" msprop:Generator_ColumnPropNameInRow="PayrollEnding" msprop:Generator_ColumnVarNameInTable="columnPayrollEnding" msprop:Generator_ColumnPropNameInTable="PayrollEndingColumn" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

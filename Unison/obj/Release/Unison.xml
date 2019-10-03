@@ -1,0 +1,253 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Unison
+</name>
+</assembly>
+<members>
+<member name="T:RoutesModule.RouteSheetDS.RouteSheetsDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RoutesModule.RouteSheetDS.RouteSheetsRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RoutesModule.RouteSheetDS.RouteSheetsRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RoutesModule.RouteSheetDS">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="M:RoutesModule.RoutesVars.SIDIsBillable(RoutesModule.RoutesVars.SID@,System.DateTime,System.DateTime)">
+	<summary>
+ This function will quickly determine whether or not an SID is billable based on the SID's "Start Date" and/or 
+ "End Date" and/or "Last Bill Date" and the start and end dates of the billing period for which the SID is being examined.
+</summary>
+	<returns>
+ The function will return TRUE if the SID is billable or FALSE if it is not.
+ </returns>
+	<remarks>
+ The logic employed in this function assumes that the tests are conducted in a specific order.  This is critical since certain
+ things may be assumed based on exclusion.  Although certain other information about the SID can be deduced about the SID, such as
+ whether or not it is a Restart, we refrain from doing so within this function because that additional information cannot always be
+ known and we do not want to detract from the functions stated purpose which is simply to classify an SID as billable or not.
+</remarks>
+</member><member name="T:RoutesModule.SammyDS.SammyDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RoutesModule.SammyDS.SammyRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RoutesModule.SammyDS.SammyRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RoutesModule.SammyDS">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RoutesModule.OperatorScanCardDS.ExpenseBreakdownDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RoutesModule.OperatorScanCardDS.ExpenseBreakdownRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RoutesModule.OperatorScanCardDS.ExpenseBreakdownRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RoutesModule.OperatorScanCardDS">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RoutesModule.smInvoiceDetailsDS">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RoutesModule.TimeCardEventsAnalysisDS.TimeCardEventsAnalysisDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RoutesModule.TimeCardEventsAnalysisDS.TimeCardEventsAnalysisRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RoutesModule.TimeCardEventsAnalysisDS.TimeCardEventsAnalysisRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RoutesModule.TimeCardEventsAnalysisDS">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RoutesModule.ResponseReport_DS2.ResponseReportViewDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RoutesModule.ResponseReport_DS2.ResponseReportViewRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RoutesModule.ResponseReport_DS2.ResponseReportViewRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RoutesModule.ResponseReport_DS2">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RoutesModule.WeightTotalsDS.WPGTotalsDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RoutesModule.WeightTotalsDS.WPGTotalsRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RoutesModule.WeightTotalsDS.WPGTotalsRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RoutesModule.WeightTotalsDS">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RoutesModule.PeriodIncomeDeductionDS.ADDRESSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RoutesModule.PeriodIncomeDeductionDS.ADDRESSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RoutesModule.PeriodIncomeDeductionDS.ADDRESSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RoutesModule.PeriodIncomeDeductionDS">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RoutesModule.EmployeeBadgeDS.EmployeeBadgeDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RoutesModule.EmployeeBadgeDS.EmployeeBadgeRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RoutesModule.EmployeeBadgeDS.EmployeeBadgeRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RoutesModule.EmployeeBadgeDS">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RoutesModule.TimeCardEventsPlusDS.TimeCardEventsPlusDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RoutesModule.TimeCardEventsPlusDS.TimeCardEventsPlusRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RoutesModule.TimeCardEventsPlusDS.TimeCardEventsPlusRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RoutesModule.TimeCardEventsPlusDS">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RoutesModule.ExpenseBreakdownDS.ExpenseBreakdownDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RoutesModule.ExpenseBreakdownDS.ExpenseBreakdownRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RoutesModule.ExpenseBreakdownDS.ExpenseBreakdownRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RoutesModule.ExpenseBreakdownDS">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RoutesModule.InvoiceDetailsDS.InvoiceDetailsViewDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RoutesModule.InvoiceDetailsDS.InvoiceDetailsViewRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RoutesModule.InvoiceDetailsDS.InvoiceDetailsViewRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RoutesModule.InvoiceDetailsDS">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RoutesModule.TimeCardComplianceDS.TimeCardComplianceDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RoutesModule.TimeCardComplianceDS.TimeCardComplianceRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RoutesModule.TimeCardComplianceDS.TimeCardComplianceRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RoutesModule.TimeCardComplianceDS">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RoutesModule.TimeCardInputActivityDS.TimeCardInputActivityDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RoutesModule.TimeCardInputActivityDS.TimeCardInputActivityRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RoutesModule.TimeCardInputActivityDS.TimeCardInputActivityRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RoutesModule.TimeCardInputActivityDS">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:RoutesModule.TimeCardLabelsDS.TimeCardLabelsDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:RoutesModule.TimeCardLabelsDS.TimeCardLabelsRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:RoutesModule.TimeCardLabelsDS.TimeCardLabelsRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:RoutesModule.TimeCardLabelsDS">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+</members>
+</doc>

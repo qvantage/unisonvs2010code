@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+           
+                      <xs:schema id="Manifests" targetNamespace="http://tempuri.org/Manifests.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/Manifests.xsd"
+	xmlns:mstns="http://tempuri.org/Manifests.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+
+  <xs:element name="Manifests" msdata:IsDataSet="true">
+    <xs:complexType>
+      <xs:choice  maxOccurs="unbounded">
+        <xs:element name="Manifests">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID"   type="xs:int" />
+              <xs:element name="Name"     type="xs:string" />
+              <xs:element name="oldAccountID"  type="xs:string" />
+              <xs:element name="OfficeID" type="xs:string" />
+              <xs:element name="WeightID"  type="xs:string" />
+              <xs:element name="CompName" type="xs:string" />
+              <xs:element name="Street"  type="xs:string" />
+              <xs:element name="Address2"  type="xs:int" />
+              <xs:element name="CityID" type="xs:string" />
+              <xs:element name="CityName" type="xs:string" />
+              <xs:element name="STATE" type="xs:string" />
+              <xs:element name="ZipCode" type="xs:string" />
+              <xs:element name="PHONE1" type="xs:string" />
+              <xs:element name="PHONE2"  type="xs:string" />
+              <xs:element name="GroupID"  type="xs:string" />
+              <xs:element name="oldParentID" type="xs:string" />
+              <xs:element name="Remarks" type="xs:string" />
+              <xs:element name="StartDate" type="xs:dateTime" />
+              <xs:element name="EndDate" type="xs:dateTime" />
+              <xs:element name="SID" type="xs:int" />
+              <xs:element name="AccountID"  type="xs:string" />
+              <xs:element name="ParentID"  type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

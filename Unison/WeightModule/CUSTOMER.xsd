@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+           
+           <xs:schema id="CUSTOMER" targetNamespace="http://tempuri.org/CUSTOMER.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/CUSTOMER.xsd"
+	xmlns:mstns="http://tempuri.org/CUSTOMER.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+
+  <xs:element name="CUSTOMER" msdata:IsDataSet="true">
+    <xs:complexType>
+      <xs:choice  maxOccurs="unbounded">
+        <xs:element name="CUSTOMER" >
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:int" />
+              <xs:element name="NAME" type="xs:string" />
+              <xs:element name="CONTACT" type="xs:string" />
+              <xs:element name="STREET"  type="xs:string" />
+              <xs:element name="Address2"  type="xs:string"  />
+              <xs:element name="CITYNAME" type="xs:string"  />
+              <xs:element name="STATE"  type="xs:string" />
+              <xs:element name="ZIPCODE"  type="xs:int" />
+              <xs:element name="PHONE1" type="xs:string"  />
+              <xs:element name="PHONE2" type="xs:string"  />
+              <xs:element name="FAX" type="xs:string" />
+              <xs:element name="PAGER"  type="xs:string"  />
+              <xs:element name="EXTENSION"    type="xs:string" />
+              <xs:element name="EMAIL"  type="xs:string"  />
+              <xs:element name="Web"   type="xs:string" />
+              <xs:element name="CREATEDATE" type="xs:dateTime" />
+              <xs:element name="LASTBillDate"   type="xs:dateTime"  />
+              <xs:element name="BCycleCode"  type="xs:string" />
+              <xs:element name="CREDITLIMIT"  type="xs:string" />
+              <xs:element name="COMMENTS"    type="xs:string"  />
+              <xs:element name="DISCOUNTRATE" type="xs:string"  />
+              <xs:element name="SALESID" type="xs:string"  />
+              <xs:element name="APPLYRATEINCREASE"  type="xs:string"  />
+              <xs:element name="GRACEPERIOD"  type="xs:string"  />
+              <xs:element name="TAXRATE"    type="xs:string"  />
+              <xs:element name="FuelSURCHARGE"   type="xs:string"  />
+              <xs:element name="INCREASEDATE"  type="xs:string"  />
+              <xs:element name="INCREASERATE"   type="xs:string"  />
+              <xs:element name="FINANCECHARGE"     type="xs:string"  />
+              <xs:element name="Status"    type="xs:string"  />
+              <xs:element name="AcctGroupID"  type="xs:string"  />
+              <xs:element name="SubjHoliday"  type="xs:string"  />
+              <xs:element name="bNAME"   type="xs:string"  />
+              <xs:element name="bCONTACT"    type="xs:string"  />
+              <xs:element name="bSTREET"   type="xs:string"  />
+              <xs:element name="bADDRESS2"  type="xs:string"  />
+              <xs:element name="bCITYNAME"   type="xs:string"  />
+              <xs:element name="bSTATE"   type="xs:string"  />
+              <xs:element name="bZIPCODE"   type="xs:string"  />
+              <xs:element name="bPHONE1"  type="xs:string"  />
+              <xs:element name="bPHONE2"  type="xs:string"  />
+              <xs:element name="bFAX"   type="xs:string"  />
+              <xs:element name="bEMAIL"   type="xs:string"  />
+              <xs:element name="SamePayAddress"   type="xs:string"  />
+              <xs:element name="NRVNU"  type="xs:string"  />
+              <xs:element name="HolidaySvcMj" type="xs:string"  />
+              <xs:element name="HolidaySvcMn"  type="xs:string"  />
+              <xs:element name="HolidayNoticeMj" type="xs:string"  />
+              <xs:element name="HolidayNoticeMn" type="xs:string"  />
+              <xs:element name="HolidayCommentsMn"  type="xs:string"  />
+              <xs:element name="CourierCode"  type="xs:string"  />
+              <xs:element name="LocIDSuffix"  type="xs:string"  />
+              <xs:element name="MasterCustID"    type="xs:string"  />
+              <xs:element name="MasterCustName"    type="xs:string"  />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

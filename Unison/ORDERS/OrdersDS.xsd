@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="OrdersDS" targetNamespace="http://tempuri.org/OrdersDS.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/OrdersDS.xsd"
+	xmlns:mstns="http://tempuri.org/OrdersDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="OrdersDS" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Orders">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="OrdersId" type="xs:int" />
+							<xs:element name="CourierLabelID" type="xs:int" />
+							<xs:element name="Invoice_No" type="xs:int" />
+							<xs:element name="PUAddressID" type="xs:int" />
+							<xs:element name="DLAddressID" type="xs:int" />
+							<xs:element name="COD" type="xs:int" />
+							<xs:element name="FreightCollect" type="xs:int" />
+							<xs:element name="NeedPricing" type="xs:int" />
+							<xs:element name="OrderDate" type="xs:dateTime" />
+							<xs:element name="PUDate" type="xs:dateTime" />
+							<xs:element name="DLDate" type="xs:dateTime" />
+							<xs:element name="InsertDate" type="xs:dateTime" />
+							<xs:element name="UpdateDate" type="xs:dateTime" />
+							<xs:element name="CODAmount" type="xs:decimal" />
+							<xs:element name="DeclaredValue" type="xs:decimal" />
+							<xs:element name="TrackingNum" type="xs:string" />
+							<xs:element name="OrderRef1" type="xs:string" />
+							<xs:element name="OrderRef2" type="xs:string" />
+							<xs:element name="OrderStatus" type="xs:string" />
+							<xs:element name="StatusComment" type="xs:string" />
+							<xs:element name="OrderOrigin" type="xs:string" />
+							<xs:element name="CustomerID" type="xs:string" />
+							<xs:element name="CustomerPO" type="xs:string" />
+							<xs:element name="AuthorizedBy" type="xs:string" />
+							<xs:element name="PULocationID" type="xs:string" />
+							<xs:element name="PUName" type="xs:string" />
+							<xs:element name="PUStreet" type="xs:string" />
+							<xs:element name="PUAddress" type="xs:string" />
+							<xs:element name="PUCity" type="xs:string" />
+							<xs:element name="PUState" type="xs:string" />
+							<xs:element name="PUZip" type="xs:string" />
+							<xs:element name="PUContact" type="xs:string" />
+							<xs:element name="PUAttn" type="xs:string" />
+							<xs:element name="PURef1" type="xs:string" />
+							<xs:element name="PURef2" type="xs:string" />
+							<xs:element name="DLLocationID" type="xs:string" />
+							<xs:element name="DLName" type="xs:string" />
+							<xs:element name="DLStreet" type="xs:string" />
+							<xs:element name="DLAddress" type="xs:string" />
+							<xs:element name="DLCity" type="xs:string" />
+							<xs:element name="DLState" type="xs:string" />
+							<xs:element name="DLZip" type="xs:string" />
+							<xs:element name="DLContact" type="xs:string" />
+							<xs:element name="DLAttn" type="xs:string" />
+							<xs:element name="DLRef1" type="xs:string" />
+							<xs:element name="DLRef2" type="xs:string" />
+							<xs:element name="InsertUserId" type="xs:string" />
+							<xs:element name="UpdateUserId" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

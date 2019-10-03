@@ -1,0 +1,4 @@
+XLODBC
+1
+DRIVER=SQL Server;SERVER=12.158.238.68;UID=Unison;PWD=unison;APP=Microsoft Open Database Connectivity;WSID=ADMINPC;Network=DBMSSOCN;Address=12.158.238.68,1433
+Select n.AccountName, n.AccountID, h.charge from UN_HOLIDAYS.dbo.Notices n, UN_HOLIDAYS.dbo.Holidays h where n.HDate = h.Hdate AND n.HDate = '02/20/2017' AND n.FormatID = 165 Order By n.AccountID

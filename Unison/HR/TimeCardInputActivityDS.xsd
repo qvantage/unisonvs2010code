@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="TimeCardInputActivityDS" targetNamespace="http://tempuri.org/TimeCardInputActivityDS.xsd"
+	xmlns:mstns="http://tempuri.org/TimeCardInputActivityDS.xsd" xmlns="http://tempuri.org/TimeCardInputActivityDS.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" xmlns:NameSpace1="urn:schemas-microsoft-com:xml-msdatasource"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="TimeCardInputActivityDS" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="TimeCardInputActivity">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="RowID" type="xs:int" />
+							<xs:element name="EmployeeID" type="xs:int" />
+							<xs:element name="FirstName" type="xs:string" />
+							<xs:element name="LastName" type="xs:string" />
+							<xs:element name="Division" type="xs:string" />
+							<xs:element name="OfficeID" type="xs:int" />
+							<xs:element name="Office" type="xs:string" />
+							<xs:element name="CheckInDate" type="xs:dateTime" />
+							<xs:element name="TimeIn" type="xs:decimal" />
+							<xs:element name="CheckOutDate" type="xs:dateTime" />
+							<xs:element name="TimeOut" type="xs:decimal" />
+							<xs:element name="BreakTime" type="xs:decimal" />
+							<xs:element name="DeptNo" type="xs:string" />
+							<xs:element name="PayRate" type="xs:decimal" />
+							<xs:element name="TotalHrs" type="xs:decimal" />
+							<xs:element name="RegHrs" type="xs:decimal" />
+							<xs:element name="OTHrs" type="xs:decimal" />
+							<xs:element name="DTHrs" type="xs:decimal" />
+							<xs:element name="WeekEnding" type="xs:dateTime" />
+							<xs:element name="PayrollEnding" type="xs:dateTime" />
+							<xs:element name="LastUpdate" type="xs:dateTime" />
+							<xs:element name="Processed" type="xs:boolean" />
+							<xs:element name="OperatorID" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

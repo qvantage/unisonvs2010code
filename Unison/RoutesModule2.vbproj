@@ -1,0 +1,2030 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E6EB22A6-5BA8-445C-8E71-DECCC0CCB475}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Unison</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>RoutesModule</RootNamespace>
+    <StartupObject>RoutesModule.LoginScreen</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Unison.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Unison.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <DocumentationFile>Unison.xml</DocumentationFile>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <DocumentationFile>Unison.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CRVsPackageLib, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CRVsPackageLib.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics.Excel.v3.1">
+      <Name>Infragistics.Excel.v3.1</Name>
+      <HintPath>..\..\Program Files\Infragistics\UltraWinGrid\v3.1\Infragistics.Excel.v3.1.dll</HintPath>
+      <AssemblyFolderKey>hklm\infragistics.win.ultrawinmaskededit.v3.1.20041</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="Infragistics.Shared.v3.1">
+      <Name>Infragistics.Shared.v3.1</Name>
+      <HintPath>..\..\Program Files\Common Files\Infragistics\Shared\v3.1\Infragistics.Shared.v3.1.dll</HintPath>
+      <AssemblyFolderKey>hklm\infragistics.shared.v3.1.20041</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="Infragistics.Win.Misc.v3.1">
+      <Name>Infragistics.Win.Misc.v3.1</Name>
+      <HintPath>..\..\Program Files\Infragistics\UltraWinMisc\v3.1\Infragistics.Win.Misc.v3.1.dll</HintPath>
+      <AssemblyFolderKey>hklm\infragistics.win.ultrawinmisc.v3.1.20041</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="Infragistics.Win.UltraWinEditors.v3.1">
+      <Name>Infragistics.Win.UltraWinEditors.v3.1</Name>
+      <HintPath>..\..\Program Files\Infragistics\UltraWinEditors\v3.1\Infragistics.Win.UltraWinEditors.v3.1.dll</HintPath>
+      <AssemblyFolderKey>hklm\infragistics.win.ultrawineditors.v3.1.20041</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="Infragistics.Win.UltraWinGrid.ExcelExport.v3.1">
+      <Name>Infragistics.Win.UltraWinGrid.ExcelExport.v3.1</Name>
+      <HintPath>..\..\Program Files\Infragistics\UltraWinGrid\v3.1\Infragistics.Win.UltraWinGrid.ExcelExport.v3.1.dll</HintPath>
+      <AssemblyFolderKey>hklm\infragistics.win.ultrawinmaskededit.v3.1.20041</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="Infragistics.Win.UltraWinGrid.v3.1">
+      <Name>Infragistics.Win.UltraWinGrid.v3.1</Name>
+      <HintPath>..\..\Program Files\Infragistics\UltraWinGrid\v3.1\Infragistics.Win.UltraWinGrid.v3.1.dll</HintPath>
+      <AssemblyFolderKey>hklm\infragistics.win.ultrawinmaskededit.v3.1.20041</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="Infragistics.Win.UltraWinMaskedEdit.v3.1">
+      <Name>Infragistics.Win.UltraWinMaskedEdit.v3.1</Name>
+      <HintPath>..\..\Program Files\Infragistics\UltraWinGrid\v3.1\Infragistics.Win.UltraWinMaskedEdit.v3.1.dll</HintPath>
+      <AssemblyFolderKey>hklm\infragistics.win.ultrawinmaskededit.v3.1.20041</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="Infragistics.Win.UltraWinSchedule.v3.1">
+      <Name>Infragistics.Win.UltraWinSchedule.v3.1</Name>
+      <HintPath>..\..\Program Files\Infragistics\UltraWinSchedule\v3.1\Infragistics.Win.UltraWinSchedule.v3.1.dll</HintPath>
+      <AssemblyFolderKey>hklm\infragistics.win.ultrawinschedule.v3.1.20041</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="Infragistics.Win.UltraWinTree.v3.1">
+      <Name>Infragistics.Win.UltraWinTree.v3.1</Name>
+      <HintPath>..\..\Program Files\Infragistics\UltraWinTree\v3.1\Infragistics.Win.UltraWinTree.v3.1.dll</HintPath>
+      <AssemblyFolderKey>hklm\infragistics.win.ultrawintree.v3.1.20041</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="Infragistics.Win.v3.1">
+      <Name>Infragistics.Win.v3.1</Name>
+      <HintPath>..\..\Program Files\Common Files\Infragistics\Win\v3.1\Infragistics.Win.v3.1.dll</HintPath>
+      <AssemblyFolderKey>hklm\infragistics.win.v3.1.20041</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="Infragistics2.Documents.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage for .NET 2008 Vol. 1 CLR 2.0\Common\Infragistics2.Documents.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Excel.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics2.Shared.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage for .NET 2008 Vol. 1 CLR 2.0\Windows Forms\Bin\Infragistics2.Shared.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.AppStylistSupport.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage for .NET 2008 Vol. 1 CLR 2.0\Windows Forms\Bin\Infragistics2.Win.AppStylistSupport.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.Misc.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage for .NET 2008 Vol. 1 CLR 2.0\Windows Forms\Bin\Infragistics2.Win.Misc.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraChart.v8.1.Design, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage for .NET 2008 Vol. 1 CLR 2.0\Windows Forms\Bin\Infragistics2.Win.UltraChart.v8.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinEditors.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage for .NET 2008 Vol. 1 CLR 2.0\Windows Forms\Bin\Infragistics2.Win.UltraWinEditors.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinGrid.DocumentExport.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage for .NET 2008 Vol. 1 CLR 2.0\Windows Forms\Bin\Infragistics2.Win.UltraWinGrid.DocumentExport.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinGrid.ExcelExport.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage for .NET 2008 Vol. 1 CLR 2.0\Windows Forms\Bin\Infragistics2.Win.UltraWinGrid.ExcelExport.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinGrid.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage for .NET 2008 Vol. 1 CLR 2.0\Windows Forms\Bin\Infragistics2.Win.UltraWinGrid.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinMaskedEdit.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage for .NET 2008 Vol. 1 CLR 2.0\Windows Forms\Bin\Infragistics2.Win.UltraWinMaskedEdit.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinTree.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Infragistics\NetAdvantage for .NET 2008 Vol. 1 CLR 2.0\Windows Forms\Bin\Infragistics2.Win.UltraWinTree.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.v8.1, Version=8.1.20081.1000, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Interop.Microsoft.Office.Core">
+      <Name>Office</Name>
+      <HintPath>.\Interop.Microsoft.Office.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Interop.VBIDE, Version=5.3.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\Unison\unison.git\trunk\RouteModule2\bin\Interop.VBIDE.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Word">
+      <Name>Word</Name>
+      <HintPath>.\Interop.Word.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <Name>Microsoft.VisualBasic</Name>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap">
+      <Name>System.Runtime.Serialization.Formatters.Soap</Name>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>system.web.services</Name>
+      <HintPath>..\..\windows\assembly\gac\system.web.services\1.0.5000.0__b03f5f7f11d50a3a\system.web.services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="TTSI.BARCODES">
+      <Name>TTSI.BARCODES</Name>
+      <HintPath>..\..\Program Files\Common Files\TransTechSoftware\TTSI.BARCODES.dll</HintPath>
+    </Reference>
+    <Reference Include="TTSI.COMM">
+      <Name>TTSI.COMM</Name>
+      <HintPath>..\..\Program Files\Common Files\TransTechSoftware\TTSI.COMM.dll</HintPath>
+    </Reference>
+    <Reference Include="TTSI.MEDIA">
+      <Name>TTSI.MEDIA</Name>
+      <HintPath>..\..\Program Files\Common Files\TransTechSoftware\TTSI.MEDIA.dll</HintPath>
+    </Reference>
+    <Reference Include="TTSI.PRINTERS">
+      <Name>TTSI.PRINTERS</Name>
+      <HintPath>..\..\Program Files\Common Files\TransTechSoftware\TTSI.PRINTERS.dll</HintPath>
+    </Reference>
+    <Reference Include="TTSI.SCALES">
+      <Name>TTSI.SCALES</Name>
+      <HintPath>..\..\Program Files\Common Files\TransTechSoftware\TTSI.SCALES.dll</HintPath>
+    </Reference>
+    <Reference Include="TTSI.UTILITES">
+      <Name>TTSI.UTILITES</Name>
+      <HintPath>..\TTSI.UTILITIES\bin\TTSI.UTILITES.dll</HintPath>
+    </Reference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountServices.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountsListingGeneral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Billing Module\BillingInvoiceGen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billing Module\BillingSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billing Module\BillingVars.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Billing Module\CopyPricePlan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billing Module\ExportInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billing Module\InvoiceChargeDistribution.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billing Module\InvoiceDelete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billing Module\InvoiceDetailsDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvoiceDetailsDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Billing Module\InvoiceDetailsReport.vb">
+      <DependentUpon>InvoiceDetailsReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Billing Module\InvoiceListing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billing Module\InvoiceMiscCharges.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billing Module\InvoiceMiscChargesListing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billing Module\InvoicePrint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billing Module\PricePlanCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billing Module\PricePlanModules.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billing Module\PricePlanSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billing Module\PricePlanZonesSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billing Module\SearchPricePlan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillingCycleSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodeLabelForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomClasses.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmployeesBase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnterTextBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GlobalVars.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GroupsSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Holidays Module\AccountsListing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Holidays Module\HolidaySetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Holidays Module\HolidaysVars.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Holidays Module\MassAcctHolidaySetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Holidays Module\NoSvcRequiredListing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Holidays Module\NoticeFormats.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Holidays Module\NoticeSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Holidays Module\RequiredServices.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Holidays Module\RequiredServicesListing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Holidays Module\ResponesReport1.vb">
+      <DependentUpon>ResponesReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Holidays Module\ResponseReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Holidays Module\ResponseReport_DS.Designer.vb">
+      <DependentUpon>ResponseReport_DS.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Holidays Module\ResponseReport_DS.vb">
+      <DependentUpon>ResponseReport_DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Holidays Module\RespProcess.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\BranchFuelSurchSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\clsDate.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HR\clsFieldValidator.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HR\DeductionSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\DeptClassesSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\DeptSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\EmployeeBadgeDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeeBadgeDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HR\EmployeeBadgeForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\EmployeeBadgePreview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\EmployeeBadgePreviewTTI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\EmployeeBadgeReport.vb">
+      <DependentUpon>EmployeeBadgeReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="HR\EmployeeBadgeReport2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeeBadgeReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HR\EmployeeBadgeReportCFC.vb">
+      <DependentUpon>EmployeeBadgeReportCFC.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="HR\EmployeeBadgeReportCFCr.vb">
+      <DependentUpon>EmployeeBadgeReportCFCr.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="HR\EmployeeBadgeReportTPCr.vb">
+      <DependentUpon>EmployeeBadgeReportTPCr.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="HR\EmployeeBadgeReportTTI.vb">
+      <DependentUpon>EmployeeBadgeReportTTI.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="HR\EmployeeBadgeReportTTIr.vb">
+      <DependentUpon>EmployeeBadgeReportTTIr.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="HR\EmployeeListing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\EmployeeListingYearToDate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\EmployeeSchedule.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\EmployeeSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\ExpenseBreakdownDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExpenseBreakdownDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HR\ExpenseBreakdownForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\ExpenseBreakdownReport.vb">
+      <DependentUpon>ExpenseBreakdownReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="HR\frmTimeCardLabel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\HRVars.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HR\MileageInput.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\MileageInputGetPayrollEnding.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\MileageListing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\MiscIncomeSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\PayPeriodListing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\PeriodIncomeDeductionCR1.vb">
+      <DependentUpon>PeriodIncomeDeductionCR.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="HR\PeriodIncomeDeductionDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PeriodIncomeDeductionDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HR\PeriodIncomeDeductionReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\ProcessPayroll.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\ProcessTimeCardInput.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\RepresentWhichCompany.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\ResetOdometer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\SammyDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SammyDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HR\SammyForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\SammyReport.vb">
+      <DependentUpon>SammyReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="HR\TimeCardComplianceDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TimeCardComplianceDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HR\TimeCardComplianceForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\TimeCardComplianceReport.vb">
+      <DependentUpon>TimeCardComplianceReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="HR\TimeCardEventsAnalysisDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TimeCardEventsAnalysisDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HR\TimeCardEventsAnalysisForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\TimeCardEventsAnalysisReport.vb">
+      <DependentUpon>TimeCardEventsAnalysisReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="HR\TimeCardEventsPlusDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TimeCardEventsPlusDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HR\TimeCardInput.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\TimeCardInputActivityDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TimeCardInputActivityDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HR\TimeCardInputGetPayrollEnding.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\TimeCardLabels2.vb">
+      <DependentUpon>TimeCardLabels2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="HR\TimeCardLabels3x1.vb">
+      <DependentUpon>TimeCardLabels3x1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="HR\TimeCardLabelsDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TimeCardLabelsDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HR\TimeCardLabelsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\TimeCardLabelsReport.vb">
+      <DependentUpon>TimeCardLabelsReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="HR\TimeCardListing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\TimeCardVerification.vb">
+      <DependentUpon>TimeCardVerification.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="HR\TimeCardVerificationForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\TimeCardVerificationReport.vb">
+      <DependentUpon>TimeCardVerificationReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="HR\TotalHoursInput.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\TotalHoursInput2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\UnProcDedIncomeListing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\VehicleListing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\WCCodesSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfragisticsLibs.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Library\CourierLabels.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Library\Location.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Library\SimpleTable.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Library\TrackingEvent.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Library\VarChar.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ListingInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NoteEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ORDERS\OrderLabelForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ORDERS\OrderLabelV11.vb">
+      <DependentUpon>OrderLabelV1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ORDERS\OrdersDS.vb">
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="ORDERS\OrderVars.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ORDERS\RapidOrderHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PackageTypes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhoneListing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Routes Module\AcctSvcSchedule.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Routes Module\BillingTest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Routes Module\IncreaseAccounts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Routes Module\IncreaseRate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Routes Module\IncreaseServices.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Routes Module\PrintRoutesSheets.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Routes Module\RouteSheetDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RouteSheetDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Routes Module\RouteSheetForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Routes Module\RouteSheetReport.vb">
+      <DependentUpon>RouteSheetReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Routes Module\RoutesModuleVars.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Routes Module\RoutesVars.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Routes Module\RouteSvcGroups.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Routes Module\RteSvcGroupMembersListing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Routes Module\SID.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Routes Module\ZBillingTest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoutesSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchListings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceOfficeSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settlement Module\smBillingInvoiceGen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settlement Module\smBillingSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settlement Module\smBillingVars.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Settlement Module\smCopyPricePlan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settlement Module\smExportInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settlement Module\smInvoiceChargeDistribution.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settlement Module\smInvoiceDelete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settlement Module\smInvoiceDetailsDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>smInvoiceDetailsDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Settlement Module\smInvoiceDetailsReport.vb">
+      <DependentUpon>smInvoiceDetailsReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Settlement Module\smInvoiceListing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settlement Module\smInvoiceMiscCharges.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settlement Module\smInvoiceMiscChargesListing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settlement Module\smInvoicePrint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settlement Module\smPricePlanCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settlement Module\smPricePlanModules.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settlement Module\smPricePlanSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settlement Module\smPricePlanZonesSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settlement Module\smSearchPricePlan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tracking Module\AddEvent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tracking Module\BranchZip.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tracking Module\DeliveryManifest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tracking Module\DeliveryReports.vb">
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="Tracking Module\ExceptionReports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tracking Module\ImportEDI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tracking Module\ItemTrackingListing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tracking Module\Listing1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tracking Module\OperatorScanCardDS.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OperatorScanCardDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Tracking Module\Pouch &amp; Container Barcodes.vb">
+      <DependentUpon>Pouch &amp; Container Barcodes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Tracking Module\Pouch &amp; Container Barcodes1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pouch &amp; Container Barcodes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tracking Module\PouchLabelsLg.vb">
+      <DependentUpon>PouchLabelsLg.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Tracking Module\PouchLabelsLgCodeOnly1.vb">
+      <DependentUpon>PouchLabelsLgCodeOnly.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Tracking Module\PrePrintSLabel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tracking Module\PrintContainerLabels.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tracking Module\PrintedLabelsReport.vb">
+      <DependentUpon>PrintedLabelsReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Tracking Module\PrintLabels.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tracking Module\PrintPouchLabels.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tracking Module\RouteSheet.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RouteSheet.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tracking Module\ScanListReports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tracking Module\ShipmentDestinations.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tracking Module\SLabelsColor1x4.vb">
+      <DependentUpon>SLabelsColor1x4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Tracking Module\SLabelsVer2.vb">
+      <DependentUpon>SLabelsVer2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Tracking Module\SLabelsVer2Hold.vb">
+      <DependentUpon>SLabelsVer2Hold.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Tracking Module\SummarySheet.vb">
+      <DependentUpon>SummarySheet.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Tracking Module\Third Party Barcoded Labels1.vb">
+      <DependentUpon>Third Party Barcoded Labels.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Tracking Module\TopTic11.vb">
+      <DependentUpon>TopTic1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Tracking Module\TopTic1Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tracking Module\TrackingVars.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tracking Module\TransReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tracking Module\WeightCaptureSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrucksManagement\InvoiceAssignment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrucksManagement\ProviderSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrucksManagement\TrucksActivity.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrucksManagement\TrucksHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrucksManagement\TrucksInventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrucksManagement\TrucksInventoryListing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrucksManagement\TrucksVars.vb" />
+    <Compile Include="UnisonVars.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WeightModule\crSigmaPrint.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WeightModule\crSigmaPrint1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crSigmaPrint.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WeightModule\crTranReport41.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crTranReport4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WeightModule\crTranSummary.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WeightModule\crTranSummary1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crTranSummary.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WeightModule\CrystalReport2.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WeightModule\CrystalReport21.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WeightModule\CrystalReport24.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WeightModule\CrystalReport25.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WeightModule\DailyEntry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeightModule\DailyEntryListing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeightModule\DailyEntryUtilites.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeightModule\LocationInfo.vb" />
+    <Compile Include="WeightModule\Report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeightModule\SigmaPrint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeightModule\WeightBlank.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WeightModule\WeightBlank1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WeightBlank.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WeightModule\WeightBlankBarcode.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WeightModule\WeightBlankBarcode2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WeightBlankBarcode.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WeightModule\WeightBreakdown.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeightModule\WeightEntryBlankPrint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeightModule\WeightInputsTable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeightModule\WeightPlan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeightModule\WeightPlanGroup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeightModule\WeightPlanListing1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeightModule\WeightTotals-CR9-All WPGs_UNISON.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WeightModule\WeightTotals-CR9-All WPGs_UNISON1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WeightTotals-CR9-All WPGs_UNISON.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WeightModule\WeightTotalsDS.Designer.vb" />
+    <Compile Include="WeightModule\WeightVars.vb" />
+    <Compile Include="WeightModule\{8687997B-C74C-4FED-92A2-7C3224AA05F3}.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>{8687997B-C74C-4FED-92A2-7C3224AA05F3}.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WeightModule\{8AFA208B-A979-4053-8CF1-487D97DFD7DC}.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>{8AFA208B-A979-4053-8CF1-487D97DFD7DC}.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WeightModule\{BA446A84-5353-4432-BB33-2769243642BB}.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>{BA446A84-5353-4432-BB33-2769243642BB}.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ZipsInZones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Content Include="favicon.ico" />
+    <Content Include="WeightModule\SQL\Import Queries-Weight2 to Unison.sql" />
+    <Content Include="WeightModule\SQL\Weight Customers To Unison Customer.TXT" />
+    <EmbeddedResource Include="AccountServices.resx">
+      <DependentUpon>AccountServices.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountSetup.resx">
+      <DependentUpon>AccountSetup.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountsListingGeneral.resx">
+      <DependentUpon>AccountsListingGeneral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing Module\BillingInvoiceGen.resx">
+      <DependentUpon>BillingInvoiceGen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing Module\BillingSetup.resx">
+      <DependentUpon>BillingSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing Module\CopyPricePlan.resx">
+      <DependentUpon>CopyPricePlan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing Module\ExportInvoice.resx">
+      <DependentUpon>ExportInvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing Module\InvoiceChargeDistribution.resx">
+      <DependentUpon>InvoiceChargeDistribution.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing Module\InvoiceDelete.resx">
+      <DependentUpon>InvoiceDelete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing Module\InvoiceDetailsReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InvoiceDetailsReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing Module\InvoiceListing.resx">
+      <DependentUpon>InvoiceListing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing Module\InvoiceMiscCharges.resx">
+      <DependentUpon>InvoiceMiscCharges.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing Module\InvoiceMiscChargesListing.resx">
+      <DependentUpon>InvoiceMiscChargesListing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing Module\InvoicePrint.resx">
+      <DependentUpon>InvoicePrint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing Module\PricePlanCustomer.resx">
+      <DependentUpon>PricePlanCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing Module\PricePlanModules.resx">
+      <DependentUpon>PricePlanModules.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing Module\PricePlanSetup.resx">
+      <DependentUpon>PricePlanSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing Module\PricePlanZonesSetup.resx">
+      <DependentUpon>PricePlanZonesSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing Module\SearchPricePlan.resx">
+      <DependentUpon>SearchPricePlan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BillingCycleSetup.resx">
+      <DependentUpon>BillingCycleSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodeLabelForm.resx">
+      <DependentUpon>CodeLabelForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomClasses.resx">
+      <DependentUpon>CustomClasses.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeesBase.resx">
+      <DependentUpon>EmployeesBase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnterTextBox.resx">
+      <DependentUpon>EnterTextBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchInfo.resx">
+      <DependentUpon>frmSearchInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupsSetup.resx">
+      <DependentUpon>GroupsSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Holidays Module\AccountsListing.resx">
+      <DependentUpon>AccountsListing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Holidays Module\HolidaySetup.resx">
+      <DependentUpon>HolidaySetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Holidays Module\MassAcctHolidaySetup.resx">
+      <DependentUpon>MassAcctHolidaySetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Holidays Module\NoSvcRequiredListing.resx">
+      <DependentUpon>NoSvcRequiredListing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Holidays Module\NoticeFormats.resx">
+      <DependentUpon>NoticeFormats.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Holidays Module\NoticeSetup.resx">
+      <DependentUpon>NoticeSetup.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Holidays Module\RequiredServices.resx">
+      <DependentUpon>RequiredServices.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Holidays Module\RequiredServicesListing.resx">
+      <DependentUpon>RequiredServicesListing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Holidays Module\ResponesReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ResponesReport1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Holidays Module\ResponseReport.resx">
+      <DependentUpon>ResponseReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Holidays Module\RespProcess.resx">
+      <DependentUpon>RespProcess.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\BranchFuelSurchSetup.resx">
+      <DependentUpon>BranchFuelSurchSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\DeductionSetup.resx">
+      <DependentUpon>DeductionSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\DeptClassesSetup.resx">
+      <DependentUpon>DeptClassesSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\DeptSetup.resx">
+      <DependentUpon>DeptSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeBadgeForm.resx">
+      <DependentUpon>EmployeeBadgeForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeBadgePreview.resx">
+      <DependentUpon>EmployeeBadgePreview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeBadgePreviewTTI.resx">
+      <DependentUpon>EmployeeBadgePreviewTTI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeBadgeReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EmployeeBadgeReport2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeBadgeReportCFC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EmployeeBadgeReportCFC.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeBadgeReportCFCr.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EmployeeBadgeReportCFCr.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeBadgeReportTPCr.resx">
+      <DependentUpon>EmployeeBadgeReportTPCr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeBadgeReportTPCr.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EmployeeBadgeReportTPCr.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeBadgeReportTTI.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EmployeeBadgeReportTTI.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeBadgeReportTTIr.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EmployeeBadgeReportTTIr.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeListing.resx">
+      <DependentUpon>EmployeeListing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeListingYearToDate.resx">
+      <DependentUpon>EmployeeListingYearToDate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeSchedule.resx">
+      <DependentUpon>EmployeeSchedule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmployeeSetup.resx">
+      <DependentUpon>EmployeeSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\ExpenseBreakdownForm.resx">
+      <DependentUpon>ExpenseBreakdownForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\ExpenseBreakdownReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ExpenseBreakdownReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\frmTimeCardLabel.resx">
+      <DependentUpon>frmTimeCardLabel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\MileageInput.resx">
+      <DependentUpon>MileageInput.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\MileageInputGetPayrollEnding.resx">
+      <DependentUpon>MileageInputGetPayrollEnding.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\MileageListing.resx">
+      <DependentUpon>MileageListing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\MiscIncomeSetup.resx">
+      <DependentUpon>MiscIncomeSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\PayPeriodListing.resx">
+      <DependentUpon>PayPeriodListing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\PeriodIncomeDeductionCR.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PeriodIncomeDeductionCR1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\PeriodIncomeDeductionReport.resx">
+      <DependentUpon>PeriodIncomeDeductionReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\ProcessPayroll.resx">
+      <DependentUpon>ProcessPayroll.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\ProcessTimeCardInput.resx">
+      <DependentUpon>ProcessTimeCardInput.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\RepresentWhichCompany.resx">
+      <DependentUpon>RepresentWhichCompany.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\ResetOdometer.resx">
+      <DependentUpon>ResetOdometer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\SammyForm.resx">
+      <DependentUpon>SammyForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\SammyReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SammyReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\TimeCardComplianceForm.resx">
+      <DependentUpon>TimeCardComplianceForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\TimeCardComplianceReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TimeCardComplianceReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\TimeCardEventsAnalysisForm.resx">
+      <DependentUpon>TimeCardEventsAnalysisForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\TimeCardEventsAnalysisReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TimeCardEventsAnalysisReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\TimeCardInput.resx">
+      <DependentUpon>TimeCardInput.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\TimeCardInputGetPayrollEnding.resx">
+      <DependentUpon>TimeCardInputGetPayrollEnding.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\TimeCardLabels2.resx">
+      <DependentUpon>TimeCardLabels2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\TimeCardLabels2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TimeCardLabels2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\TimeCardLabels3x1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TimeCardLabels3x1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\TimeCardLabelsForm.resx">
+      <DependentUpon>TimeCardLabelsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\TimeCardLabelsReport.resx">
+      <DependentUpon>TimeCardLabelsReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\TimeCardLabelsReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TimeCardLabelsReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\TimeCardListing.resx">
+      <DependentUpon>TimeCardListing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\TimeCardVerification.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TimeCardVerification.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\TimeCardVerificationForm.resx">
+      <DependentUpon>TimeCardVerificationForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\TimeCardVerificationReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TimeCardVerificationReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\TotalHoursInput.resx">
+      <DependentUpon>TotalHoursInput.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\TotalHoursInput2.resx">
+      <DependentUpon>TotalHoursInput2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\UnProcDedIncomeListing.resx">
+      <DependentUpon>UnProcDedIncomeListing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\VehicleListing.resx">
+      <DependentUpon>VehicleListing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\WCCodesSetup.resx">
+      <DependentUpon>WCCodesSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="licenses.licx" />
+    <EmbeddedResource Include="ListingInfo.resx">
+      <DependentUpon>ListingInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginScreen.resx">
+      <DependentUpon>LoginScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageDialog.resx">
+      <DependentUpon>MessageDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoteEditor.resx">
+      <DependentUpon>NoteEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ORDERS\OrderLabelForm.resx">
+      <DependentUpon>OrderLabelForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ORDERS\OrderLabelV1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OrderLabelV11.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ORDERS\OrderLabelV11.resx">
+      <DependentUpon>OrderLabelV11.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ORDERS\RapidOrderHistory.resx">
+      <DependentUpon>RapidOrderHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackageTypes.resx">
+      <DependentUpon>PackageTypes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhoneListing.resx">
+      <DependentUpon>PhoneListing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintDialog.resx">
+      <DependentUpon>PrintDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Routes Module\AcctSvcSchedule.resx">
+      <DependentUpon>AcctSvcSchedule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Routes Module\BillingTest.resx">
+      <DependentUpon>BillingTest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Routes Module\IncreaseAccounts.resx">
+      <DependentUpon>IncreaseAccounts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Routes Module\IncreaseRate.resx">
+      <DependentUpon>IncreaseRate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Routes Module\IncreaseServices.resx">
+      <DependentUpon>IncreaseServices.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Routes Module\PrintRoutesSheets.resx">
+      <DependentUpon>PrintRoutesSheets.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Routes Module\RouteSheetForm.resx">
+      <DependentUpon>RouteSheetForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Routes Module\RouteSheetReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RouteSheetReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Routes Module\RouteSvcGroups.resx">
+      <DependentUpon>RouteSvcGroups.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Routes Module\RteSvcGroupMembersListing.resx">
+      <DependentUpon>RteSvcGroupMembersListing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Routes Module\ZBillingTest.resx">
+      <DependentUpon>ZBillingTest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoutesSetup.resx">
+      <DependentUpon>RoutesSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchItem.resx">
+      <DependentUpon>SearchItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchListings.resx">
+      <DependentUpon>SearchListings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceOfficeSetup.resx">
+      <DependentUpon>ServiceOfficeSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settlement Module\smBillingInvoiceGen.resx">
+      <DependentUpon>smBillingInvoiceGen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settlement Module\smBillingSetup.resx">
+      <DependentUpon>smBillingSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settlement Module\smCopyPricePlan.resx">
+      <DependentUpon>smCopyPricePlan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settlement Module\smExportInvoice.resx">
+      <DependentUpon>smExportInvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settlement Module\smInvoiceChargeDistribution.resx">
+      <DependentUpon>smInvoiceChargeDistribution.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settlement Module\smInvoiceDelete.resx">
+      <DependentUpon>smInvoiceDelete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settlement Module\smInvoiceDetailsReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>smInvoiceDetailsReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settlement Module\smInvoiceListing.resx">
+      <DependentUpon>smInvoiceListing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settlement Module\smInvoiceMiscCharges.resx">
+      <DependentUpon>smInvoiceMiscCharges.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settlement Module\smInvoiceMiscChargesListing.resx">
+      <DependentUpon>smInvoiceMiscChargesListing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settlement Module\smInvoicePrint.resx">
+      <DependentUpon>smInvoicePrint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settlement Module\smPricePlanCustomer.resx">
+      <DependentUpon>smPricePlanCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settlement Module\smPricePlanModules.resx">
+      <DependentUpon>smPricePlanModules.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settlement Module\smPricePlanSetup.resx">
+      <DependentUpon>smPricePlanSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settlement Module\smPricePlanZonesSetup.resx">
+      <DependentUpon>smPricePlanZonesSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settlement Module\smSearchPricePlan.resx">
+      <DependentUpon>smSearchPricePlan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracking Module\AddEvent.resx">
+      <DependentUpon>AddEvent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracking Module\BranchZip.resx">
+      <DependentUpon>BranchZip.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracking Module\DeliveryManifest.resx">
+      <DependentUpon>DeliveryManifest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracking Module\ExceptionReports.resx">
+      <DependentUpon>ExceptionReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracking Module\ImportEDI.resx">
+      <DependentUpon>ImportEDI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracking Module\ItemTrackingListing.resx">
+      <DependentUpon>ItemTrackingListing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracking Module\Listing1.resx">
+      <DependentUpon>Listing1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracking Module\Pouch &amp; Container Barcodes.resx">
+      <DependentUpon>Pouch &amp; Container Barcodes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracking Module\Pouch &amp; Container Barcodes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Pouch &amp; Container Barcodes1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracking Module\PouchLabelsLg.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PouchLabelsLg.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracking Module\PouchLabelsLgCodeOnly.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PouchLabelsLgCodeOnly1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracking Module\PrePrintSLabel.resx">
+      <DependentUpon>PrePrintSLabel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracking Module\PrintContainerLabels.resx">
+      <DependentUpon>PrintContainerLabels.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracking Module\PrintedLabelsReport.resx">
+      <DependentUpon>PrintedLabelsReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracking Module\PrintedLabelsReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PrintedLabelsReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracking Module\PrintLabels.resx">
+      <DependentUpon>PrintLabels.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracking Module\PrintPouchLabels.resx">
+      <DependentUpon>PrintPouchLabels.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracking Module\RouteSheet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RouteSheet.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracking Module\ScanListReports.resx">
+      <DependentUpon>ScanListReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracking Module\ShipmentDestinations.resx">
+      <DependentUpon>ShipmentDestinations.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracking Module\SLabelsColor1x4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SLabelsColor1x4.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracking Module\SLabelsVer2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SLabelsVer2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracking Module\SLabelsVer2Hold.resx">
+      <DependentUpon>SLabelsVer2Hold.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracking Module\SLabelsVer2Hold.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SLabelsVer2Hold.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracking Module\SummarySheet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SummarySheet.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracking Module\Third Party Barcoded Labels.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Third Party Barcoded Labels1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracking Module\Third Party Barcoded Labels1.resx">
+      <DependentUpon>Third Party Barcoded Labels1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracking Module\TopTic1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TopTic11.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracking Module\TopTic1Form.resx">
+      <DependentUpon>TopTic1Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracking Module\TransReport.resx">
+      <DependentUpon>TransReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracking Module\WeightCaptureSummary.resx">
+      <DependentUpon>WeightCaptureSummary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrucksManagement\InvoiceAssignment.resx">
+      <DependentUpon>InvoiceAssignment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrucksManagement\ProviderSetup.resx">
+      <DependentUpon>ProviderSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrucksManagement\TrucksActivity.resx">
+      <DependentUpon>TrucksActivity.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrucksManagement\TrucksHistory.resx">
+      <DependentUpon>TrucksHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrucksManagement\TrucksInventory.resx">
+      <DependentUpon>TrucksInventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrucksManagement\TrucksInventoryListing.resx">
+      <DependentUpon>TrucksInventoryListing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeightModule\crSigmaPrint.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crSigmaPrint1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeightModule\crTranReport4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crTranReport41.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeightModule\crTranSummary.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crTranSummary1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeightModule\CrystalReport2.resx">
+      <DependentUpon>CrystalReport2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeightModule\CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport25.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeightModule\DailyEntry.resx">
+      <DependentUpon>DailyEntry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeightModule\DailyEntryListing.resx">
+      <DependentUpon>DailyEntryListing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeightModule\DailyEntryUtilites.resx">
+      <DependentUpon>DailyEntryUtilites.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeightModule\LocationInfo.resx">
+      <DependentUpon>LocationInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeightModule\Report.resx">
+      <DependentUpon>Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeightModule\SigmaPrint.resx">
+      <DependentUpon>SigmaPrint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeightModule\WeightBlank.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>WeightBlank1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeightModule\WeightBlankBarcode.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>WeightBlankBarcode2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeightModule\WeightBreakdown.resx">
+      <DependentUpon>WeightBreakdown.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeightModule\WeightEntryBlankPrint.resx">
+      <DependentUpon>WeightEntryBlankPrint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeightModule\WeightInputsTable.resx">
+      <DependentUpon>WeightInputsTable.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeightModule\WeightPlan.resx">
+      <DependentUpon>WeightPlan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeightModule\WeightPlanGroup.resx">
+      <DependentUpon>WeightPlanGroup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeightModule\WeightPlanListing1.resx">
+      <DependentUpon>WeightPlanListing1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeightModule\WeightTotals-CR9-All WPGs_UNISON.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>WeightTotals-CR9-All WPGs_UNISON1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeightModule\{8687997B-C74C-4FED-92A2-7C3224AA05F3}.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>{8687997B-C74C-4FED-92A2-7C3224AA05F3}.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeightModule\{8AFA208B-A979-4053-8CF1-487D97DFD7DC}.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>{8AFA208B-A979-4053-8CF1-487D97DFD7DC}.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeightModule\{BA446A84-5353-4432-BB33-2769243642BB}.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>{BA446A84-5353-4432-BB33-2769243642BB}.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZipsInZones.resx">
+      <DependentUpon>ZipsInZones.vb</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Billing Module\InvoiceDetailsDS.xsc">
+      <DependentUpon>InvoiceDetailsDS.xsd</DependentUpon>
+    </None>
+    <None Include="Billing Module\InvoiceDetailsDS.xss">
+      <DependentUpon>InvoiceDetailsDS.xsd</DependentUpon>
+    </None>
+    <None Include="Billing Module\InvoiceDetailsDS.xsx">
+      <DependentUpon>InvoiceDetailsDS.xsd</DependentUpon>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Holidays Module\ResponseReport_DS.xsc">
+      <DependentUpon>ResponseReport_DS.xsd</DependentUpon>
+    </None>
+    <None Include="Holidays Module\ResponseReport_DS.xsx">
+      <DependentUpon>ResponseReport_DS.xsd</DependentUpon>
+    </None>
+    <None Include="HR\EmployeeBadgeDS.xsc">
+      <DependentUpon>EmployeeBadgeDS.xsd</DependentUpon>
+    </None>
+    <None Include="HR\EmployeeBadgeDS.xsx">
+      <DependentUpon>EmployeeBadgeDS.xsd</DependentUpon>
+    </None>
+    <None Include="HR\ExpenseBreakdownDS.xsc">
+      <DependentUpon>ExpenseBreakdownDS.xsd</DependentUpon>
+    </None>
+    <None Include="HR\ExpenseBreakdownDS.xsx">
+      <DependentUpon>ExpenseBreakdownDS.xsd</DependentUpon>
+    </None>
+    <None Include="HR\PeriodIncomeDeductionDS.xsc">
+      <DependentUpon>PeriodIncomeDeductionDS.xsd</DependentUpon>
+    </None>
+    <None Include="HR\PeriodIncomeDeductionDS.xsx">
+      <DependentUpon>PeriodIncomeDeductionDS.xsd</DependentUpon>
+    </None>
+    <None Include="HR\SammyDS.xsc">
+      <DependentUpon>SammyDS.xsd</DependentUpon>
+    </None>
+    <None Include="HR\SammyDS.xsx">
+      <DependentUpon>SammyDS.xsd</DependentUpon>
+    </None>
+    <None Include="HR\TimeCardComplianceDS.xsc">
+      <DependentUpon>TimeCardComplianceDS.xsd</DependentUpon>
+    </None>
+    <None Include="HR\TimeCardComplianceDS.xsx">
+      <DependentUpon>TimeCardComplianceDS.xsd</DependentUpon>
+    </None>
+    <None Include="HR\TimeCardEventsAnalysisDS.xsc">
+      <DependentUpon>TimeCardEventsAnalysisDS.xsd</DependentUpon>
+    </None>
+    <None Include="HR\TimeCardEventsAnalysisDS.xsx">
+      <DependentUpon>TimeCardEventsAnalysisDS.xsd</DependentUpon>
+    </None>
+    <None Include="HR\TimeCardEventsPlusDS.xsc">
+      <DependentUpon>TimeCardEventsPlusDS.xsd</DependentUpon>
+    </None>
+    <None Include="HR\TimeCardEventsPlusDS.xsx">
+      <DependentUpon>TimeCardEventsPlusDS.xsd</DependentUpon>
+    </None>
+    <None Include="HR\TimeCardInputActivityDS.xsc">
+      <DependentUpon>TimeCardInputActivityDS.xsd</DependentUpon>
+    </None>
+    <None Include="HR\TimeCardInputActivityDS.xsx">
+      <DependentUpon>TimeCardInputActivityDS.xsd</DependentUpon>
+    </None>
+    <None Include="HR\TimeCardLabelsDS.xsc">
+      <DependentUpon>TimeCardLabelsDS.xsd</DependentUpon>
+    </None>
+    <None Include="HR\TimeCardLabelsDS.xsx">
+      <DependentUpon>TimeCardLabelsDS.xsd</DependentUpon>
+    </None>
+    <None Include="ORDERS\OrdersDS.xsx">
+      <DependentUpon>OrdersDS.xsd</DependentUpon>
+    </None>
+    <None Include="Routes Module\RouteSheetDS.xsc">
+      <DependentUpon>RouteSheetDS.xsd</DependentUpon>
+    </None>
+    <None Include="Routes Module\RouteSheetDS.xsx">
+      <DependentUpon>RouteSheetDS.xsd</DependentUpon>
+    </None>
+    <None Include="Settlement Module\smInvoiceDetailsDS.xsc">
+      <DependentUpon>smInvoiceDetailsDS.xsd</DependentUpon>
+    </None>
+    <None Include="Settlement Module\smInvoiceDetailsDS.xsx">
+      <DependentUpon>smInvoiceDetailsDS.xsd</DependentUpon>
+    </None>
+    <None Include="Tracking Module\DeliveryReports.xsc">
+      <DependentUpon>DeliveryReports.xsd</DependentUpon>
+    </None>
+    <None Include="Tracking Module\DeliveryReports.xss">
+      <DependentUpon>DeliveryReports.xsd</DependentUpon>
+    </None>
+    <None Include="Tracking Module\DeliveryReports.xsx">
+      <DependentUpon>DeliveryReports.xsd</DependentUpon>
+    </None>
+    <None Include="Tracking Module\OperatorScanCardDS.xsc">
+      <DependentUpon>OperatorScanCardDS.xsd</DependentUpon>
+    </None>
+    <None Include="Tracking Module\OperatorScanCardDS.xsx">
+      <DependentUpon>OperatorScanCardDS.xsd</DependentUpon>
+    </None>
+    <Content Include="Billing Module\InvoiceDetailsDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InvoiceDetailsDS.Designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="Holidays Module\ResponseReport_DS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ResponseReport_DS.Designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="HR\EmployeeBadgeDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EmployeeBadgeDS.Designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="HR\ExpenseBreakdownDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ExpenseBreakdownDS.Designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="HR\PeriodIncomeDeductionDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PeriodIncomeDeductionDS.Designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="HR\SammyDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SammyDS.Designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="HR\TimeCardComplianceDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TimeCardComplianceDS.Designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="HR\TimeCardEventsAnalysisDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TimeCardEventsAnalysisDS.Designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="HR\TimeCardEventsPlusDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TimeCardEventsPlusDS.Designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="HR\TimeCardInputActivityDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TimeCardInputActivityDS.Designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="HR\TimeCardLabelsDS.xsd">
+      <SubType>Code</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TimeCardLabelsDS.Designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="ORDERS\OrdersDS.xsd" />
+    <Content Include="Routes Module\RouteSheetDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RouteSheetDS.Designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="Settlement Module\smInvoiceDetailsDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>smInvoiceDetailsDS.Designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="Tracking Module\DeliveryReports.xsd" />
+    <Content Include="Tracking Module\OperatorScanCardDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OperatorScanCardDS.Designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="TrucksManagement\SQL\Import From TrcksMgmt to UN_Trucks.sql" />
+    <Content Include="TTSI.UTILITIES_20C.dll" />
+    <None Include="TrucksManagement\vssver.scc" />
+    <None Include="WeightModule\Copy of WeightTotals-CR9-All WPGs_UNISON.rpt.b4SammyModify" />
+    <None Include="WeightModule\vssver.scc" />
+    <None Include="WeightModule\WeightTotalsDS.xsd" />
+    <None Include="WeightModule\WeightTotalsDS.xsx">
+      <DependentUpon>WeightTotalsDS.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

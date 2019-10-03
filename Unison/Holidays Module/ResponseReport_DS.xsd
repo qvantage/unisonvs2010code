@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="ResponseReport_DS2" targetNamespace="http://tempuri.org/ResponseReport_DS2.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/ResponseReport_DS2.xsd"
+	xmlns:mstns="http://tempuri.org/ResponseReport_DS2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="ResponseReport_DS2" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="ResponseReportView">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+							<xs:element name="FormatID" type="xs:int" />
+							<xs:element name="HDate" type="xs:dateTime" />
+							<xs:element name="AccountID" type="xs:int" />
+							<xs:element name="AccountName" type="xs:string" />
+							<xs:element name="Responded" type="xs:boolean" />
+							<xs:element name="RespDate" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="NeedService" type="xs:boolean" />
+							<xs:element name="NoService" type="xs:boolean" />
+							<xs:element name="RespOperID" type="xs:int" />
+							<xs:element name="Remarks" type="xs:string" />
+							<xs:element name="NoticeFmtID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int"
+								minOccurs="0" />
+							<xs:element name="Notice_Format" type="xs:string" minOccurs="0" />
+							<xs:element name="FileName" type="xs:string" minOccurs="0" />
+							<xs:element name="Charge" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Description" type="xs:string" minOccurs="0" />
+							<xs:element name="Holiday_Type" type="xs:short" minOccurs="0" />
+							<xs:element name="HolidayCommentsMn" type="xs:string" minOccurs="0" />
+							<xs:element name="Active" type="xs:boolean" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

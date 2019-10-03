@@ -1,0 +1,199 @@
+Insert into Customer(ID, Name, Contact, Street, CityName, State, ZipCode, Phone1, Fax, CreateDate,LastBillDate, BCycleCode, IncreaseDate, bName, bContact, bStreet, bCityName, BState, bZipcode, bPhone1, bFax, SamePayAddress)
+ (select AC#, Name, Contact, Address, City, State, zip, 
+ SUBSTRING(phone, 1, 3) + SUBSTRING(phone, 5, 3) + SUBSTRING(phone, 9, 4), 
+ SUBSTRING(Fax, 1, 3) + SUBSTRING(Fax, 5, 3) + SUBSTRING(Fax, 9, 4),
+  convert(datetime, '01/01/'+convert(varchar, (convert(integer, substring(AC#, 1, 2)) / 50)*(1900+convert(integer, substring(AC#, 1, 2)))+(((100 - convert(integer, substring(AC#, 1, 2)))/50)*((convert(integer, substring(AC#, 1, 2))-20)+2000)), 101)), 
+ convert(datetime, SUBSTRING(lastbilldate, 1, 2)+'/'+SUBSTRING(lastbilldate, 3, 2)+'/'+SUBSTRING(lastbilldate, 5, 2), 1), BC, convert(datetime, SUBSTRING(lastincdate, 1, 2)+'/'+SUBSTRING(lastincdate, 3, 2)+'/'+SUBSTRING(lastincdate, 5, 2), 1),
+ Name, Contact, Address, City, State, zip, SUBSTRING(phone, 1, 3) + SUBSTRING(phone, 5, 3) + SUBSTRING(phone, 9, 4),
+  SUBSTRING(Fax, 1, 3) + SUBSTRING(Fax, 5, 3) + SUBSTRING(Fax, 9, 4),
+  '1' from ImportAcctTop)
+  
+  
+  Update Customer set bcyclecode = 'M' where bcyclecode = 'E'
+  Update Customer set bcyclecode = 'A' where bcyclecode = 'B'
+  
+  SELECT cityname, 
+SUBSTRING
+(cityname, 1, 
+ (
+  (
+   ( len(cityname) - CHARINDEX(',', cityname) )
+   / len(cityname)
+  ) * len(cityname) + CHARINDEX(',', cityname) - 1
+ )
+) AS filtered
+FROM CUSTOMER
+
+
+UPDATE customer
+SET cityname = SUBSTRING(cityname, 1, (((len(cityname) 
+    - CHARINDEX(',', cityname)) / len(cityname)) * len(cityname) 
+    + CHARINDEX(',', cityname) - 1))
+    
+'=======================================================
+'======   SERVICE IDs   ================================
+'=======================================================
+
+UPDATE ImportTopSID SET EDate = NULL WHERE RTRIM(EDate) = ''    
+    
+drop trigger   SIDIncrement;
+  
+INSERT INTO AccountServices(AccountID, ID, CompName, Street, CityName, startdate, EndDAte, Charge) 
+    (SELECT CONVERT(int, AC#), CONVERT(int, SID), Name, 
+    RTRIM(LTRIM(Street1)) + ' ' + RTRIM(LTRIM(Street2)), City, 
+    CONVERT(datetime, SUBSTRING(SDate, 1, 2) + '/' + SUBSTRING(SDate, 3, 2) + '/' + SUBSTRING(SDate, 5, 2), 1), 
+    CONVERT(datetime, SUBSTRING(EDate, 1, 2) + '/' + SUBSTRING(EDate, 3, 2) + '/' + SUBSTRING(EDate, 5, 2), 1), 
+    CONVERT(decimal, moCost) + CONVERT(decimal, WkCost) FROM ImportTopSID)
+
+'STATE AND ZIPCODES ARE not provided, first occurance taken
+
+    '======================================================
+    UPDATE AccountServices
+        SET STATE = isnull((SELECT TOP 1 STATECODE FROM city WHERE name = AccountServices.cityname AND statecode = 'CA' ORDER BY zipcode), '')
+        , zipcode = isnull((SELECT TOP 1 zipCODE FROM city WHERE name = AccountServices.cityname AND statecode = 'CA' ORDER BY zipcode), '')
+        
+        'See what cities are not attached to state and zipcode
+        
+    '======================================================
+
+
+'Calc DailyAvg and Update
+
+'==== New Version for Bob2 =======
+'Increase AccountServices.Street len to 50
+
+INSERT INTO AccountServices(AccountID, ID, CompName, Street, CityName, startdate, EndDAte, Charge, STATE, ZIPCODE, Phone1) 
+    (SELECT distinct CONVERT(int, Cust#No), CONVERT(int, Seq#No), rtrim(ltrim(STOP#DESCRIP)), 
+    RTRIM(LTRIM(Street#NO)) + ' ' + RTRIM(LTRIM(Street#NAME)) + RTRIM(LTRIM(Addr#2)), City, 
+    CONVERT(datetime, SUBSTRING(Start#Date, 1, 2) + '/' + SUBSTRING(Start#Date, 3, 2) + '/' + SUBSTRING(Start#Date, 5, 2), 1), 
+    CONVERT(datetime, SUBSTRING(End#Date, 1, 2) + '/' + SUBSTRING(End#Date, 3, 2) + '/' + SUBSTRING(End#Date, 5, 2), 1), 
+    CONVERT(decimal(6,2), Charges), rtrim(LTRIM(STATE)), RTRIM(LTRIM(ZIP5)), RTRIM(LTRIM(PHONE))  FROM [ImportB2-0])
+
+'--- test Query
+DECLARE @State varchar(225);
+SET @State = '';
+SELECT @State = @State + ',' + Description FROM 
+	(SELECT Description FROM [ImportB2-2] WHERE CONVERT(int, Cust#No) = 94220 AND CONVERT(int, Seq#No) = 1 AND 
+                RTRIM(LTRIM(type)) = 'I') s
+SET @State = RIGHT(@State, LEN(@State) - 1)
+SELECT @State;
+
+'--- End Test Query 
+
+'Added NonPrintRemark Field to 'AccountServices'
+
+Update AccountServices set Remarks = (Select Description from [ImportB2-2] where convert(int, Cust#No) = AccountServices.AccountID AND convert(int, Seq#No) = AccountServices.ID and rtrim(ltrim(type)) = 'I') 
+
+
+
+'==== End New Version for Bob2 =======
+
+CREATE TRIGGER SIDIncrement ON dbo.AccountServices FOR INSERT AS BEGIN UPDATE AccountServices SET ID = (SELECT isnull(MAX(a2.ID), 0) + 1 AS maxsid FROM accountservices a2, inserted WHERE a2.accountid = inserted.accountid) FROM inserted i WHERE accountservices.rowid = i.rowid END
+
+'Make sure each service id has its own RTE , etc. this query will change
+' Open Time, Close, Daily Charge Time not provided. 
+'Correct Alpah chars in STP#
+'Update ImportTopSID Set AC#= ltrim(rtrim(AC#)), SID = ltrim(RTrim(SID))
+'Added to Service Offices: 32 = NC, 33 = RP, 34 = CS
+'Create Routes in Route Table left-Pad them with zero
+
+    Insert Into ServiceSchedules(AccountID, SID, STime,OfficeID, RouteNo, StopNo, Day)
+    (Select CONVERT(int, AC#), CONVERT(int, SID), 
+    convert(datetime, replicate('0',2-len(substring(LTRIM(stime), 1, charindex('.', LTRIM(stime))-1)))+substring(LTRIM(stime), 1, charindex('.', LTRIM(stime))-1) + ':' + substring(LTRIM(stime), charindex('.', LTRIM(stime))+1,2) + ':00:000', 114),
+    convert(int, br), REPLICATE('0', 4 - len(ltrim(rtrim(rte#)))) + ltrim(rtrim(rte#)), convert(int, left(Stp#,2)), 1 as Day from ImportTopSID where (ascii(MON) / 80) = 1
+    UNION ALL
+    Select CONVERT(int, AC#), CONVERT(int, SID), 
+    convert(datetime, replicate('0',2-len(substring(LTRIM(stime), 1, charindex('.', LTRIM(stime))-1)))+substring(LTRIM(stime), 1, charindex('.', LTRIM(stime))-1) + ':' + substring(LTRIM(stime), charindex('.', LTRIM(stime))+1,2) + ':00:000', 114),
+    convert(int, br), REPLICATE('0', 4 - len(ltrim(rtrim(rte#)))) + ltrim(rtrim(rte#)), convert(int, left(Stp#,2)), 2 as Day from ImportTopSID where (ascii(TUE) / 80) = 1
+        UNION ALL
+    Select CONVERT(int, AC#), CONVERT(int, SID), 
+    convert(datetime, replicate('0',2-len(substring(LTRIM(stime), 1, charindex('.', LTRIM(stime))-1)))+substring(LTRIM(stime), 1, charindex('.', LTRIM(stime))-1) + ':' + substring(LTRIM(stime), charindex('.', LTRIM(stime))+1,2) + ':00:000', 114),
+    convert(int, br), REPLICATE('0', 4 - len(ltrim(rtrim(rte#)))) + ltrim(rtrim(rte#)), convert(int, left(Stp#,2)), 3 as Day from ImportTopSID where (ascii(WED) / 80) = 1
+        UNION ALL
+    Select CONVERT(int, AC#), CONVERT(int, SID), 
+    convert(datetime, replicate('0',2-len(substring(LTRIM(stime), 1, charindex('.', LTRIM(stime))-1)))+substring(LTRIM(stime), 1, charindex('.', LTRIM(stime))-1) + ':' + substring(LTRIM(stime), charindex('.', LTRIM(stime))+1,2) + ':00:000', 114),
+    convert(int, br), REPLICATE('0', 4 - len(ltrim(rtrim(rte#)))) + ltrim(rtrim(rte#)), convert(int, left(Stp#,2)), 4 as Day from ImportTopSID where (ascii(THU) / 80) = 1
+        UNION ALL
+    Select CONVERT(int, AC#), CONVERT(int, SID), 
+    convert(datetime, replicate('0',2-len(substring(LTRIM(stime), 1, charindex('.', LTRIM(stime))-1)))+substring(LTRIM(stime), 1, charindex('.', LTRIM(stime))-1) + ':' + substring(LTRIM(stime), charindex('.', LTRIM(stime))+1,2) + ':00:000', 114),
+    convert(int, br), REPLICATE('0', 4 - len(ltrim(rtrim(rte#)))) + ltrim(rtrim(rte#)), convert(int, left(Stp#,2)), 5 as Day from ImportTopSID where (ascii(FRI) / 80) = 1
+        UNION ALL
+    Select CONVERT(int, AC#), CONVERT(int, SID), 
+    convert(datetime, replicate('0',2-len(substring(LTRIM(stime), 1, charindex('.', LTRIM(stime))-1)))+substring(LTRIM(stime), 1, charindex('.', LTRIM(stime))-1) + ':' + substring(LTRIM(stime), charindex('.', LTRIM(stime))+1,2) + ':00:000', 114),
+    convert(int, br), REPLICATE('0', 4 - len(ltrim(rtrim(rte#)))) + ltrim(rtrim(rte#)), convert(int, left(Stp#,2)), 6 as Day from ImportTopSID where (ascii(SAT) / 80) = 1
+        UNION ALL
+    Select CONVERT(int, AC#), CONVERT(int, SID), 
+    convert(datetime, replicate('0',2-len(substring(LTRIM(stime), 1, charindex('.', LTRIM(stime))-1)))+substring(LTRIM(stime), 1, charindex('.', LTRIM(stime))-1) + ':' + substring(LTRIM(stime), charindex('.', LTRIM(stime))+1,2) + ':00:000', 114),
+    convert(int, br), REPLICATE('0', 4 - len(ltrim(rtrim(rte#)))) + ltrim(rtrim(rte#)), convert(int, left(Stp#,2)), 7 as Day from ImportTopSID where (ascii(SUN) / 80) = 1)
+    
+
+'=============== New Version for Bob2: 
+
+'--- Begin Test Query For Bob2: .....
+SELECT LEFT(RTRIM(LTRIM(stop)), 2) + CONVERT(varchar, ASCII(SUBSTRING(RTRIM(LTRIM(stop)), 3, 1)) - ASCII('A')), 
+    RTRIM(LTRIM(stop))
+FROM [ImportB2-0]
+WHERE RTRIM(LTRIM(stop)) LIKE '15%' AND 
+    len(RTRIM(LTRIM(stop))) > 2
+'--- End Test Query For Bob2
+
+
+
+SELECT DISTINCT Area
+FROM [ImportB2-0]
+WHERE isnumeric(Area) = 0 AND area NOT IN
+        (SELECT name
+      FROM serviceoffices)    
+
+UPDATE [ImportB2-0]
+SET Area = serviceoffices.ID
+FROM serviceoffices
+WHERE [ImportB2-0].area = serviceoffices.NAme AND 
+    isnumeric(Area) = 0
+
+'Change type of StopNo From TinyInt to SmallInt
+
+    Insert Into ServiceSchedules(AccountID, SID, STime,OfficeID, RouteNo, StopNo, Day)
+    (Select CONVERT(int, Cust#No), CONVERT(int, Seq#No), 
+    convert(datetime, replicate('0',2-len(substring(LTRIM(Time#Due), 1, charindex('.', LTRIM(Time#Due))-1)))+substring(LTRIM(Time#Due), 1, charindex('.', LTRIM(Time#Due))-1) + ':' + substring(LTRIM(Time#Due), charindex('.', LTRIM(Time#Due))+1,2) + ':00:000', 114),
+    convert(int, Area), REPLICATE('0', 4 - len(ltrim(rtrim(Route)))) + ltrim(rtrim(Route)), convert(int, LEFT(RTRIM(LTRIM(stop)), 2) + isnull(CONVERT(varchar, ASCII(SUBSTRING(RTRIM(LTRIM(stop)), 3, 1)) - ASCII('A')),'')), convert(int, Day) from [ImportB2-0] )
+
+
+
+    
+    
+'=============== End New Version for Bob2
+    
+    
+    
+    'Routine to create New Routes ... 
+    
+    
+    'Old Routine
+    'INSERT INTO routes(OfficeID, ID, Name)
+    '    SELECT DISTINCT OfficeID, routeno, routeno FROM ServiceSchedules
+    '    WHERE routeno NOT IN (SELECT ID FROM routes)
+                
+                
+    INSERT INTO routes(OfficeID, ID, Name)
+                SELECT DISTINCT OfficeID, routeno, routeno FROM ServiceSchedules
+                WHERE CONVERT(varchar, officeid) + routeno NOT IN (SELECT CONVERT(varchar, officeid) + ID FROM routes)
+                
+    '======================================================
+    
+    'Import from Old ZAK DATA
+    '------------------------
+    INSERT INTO AccountServices([ID], AccountID, OfficeID, CompName, Street, CityName, STATE, ZipCode, PHONE1, PHONE2, Remarks, StartDate, EndDate, OpenTime, CloseTime, DoorKey, BoxKey, InternalRef, AccountRef, TimeFrameID, ServiceID, ServiceTypeID, PackageID, Charge, DailyAvgChg, InfoSID, SchedType, NonPrintRemark)
+select [ID], [AccountID], [OfficeID], [CompName], [Street], [CityName], [STATE], [ZipCode], [PHONE1], [PHONE2], [Remarks], [StartDate], [EndDate], [OpenTime], [CloseTime], [DoorKey], [BoxKey], [InternalRef], [AccountRef], [TimeFrameID], [ServiceID], [ServiceTypeID], [PackageID], [Charge], [DailyAvgChg], [InfoSID], [SchedType], [NonPrintRemark]
+from rtesmdl3.dbo.[AccountServices]
+where [AccountID]<>21119
+
+
+INSERT INTO ServiceSchedules(AccountID, SID, [Day], ServiceDate, RouteNo, StopNo, OfficeID, STime, CTime, Charge)
+select [AccountID], [SID], [Day], [ServiceDate], [RouteNo], [StopNo], [OfficeID], [STime], [CTime], [Charge]
+from rtesmdl3.dbo.[ServiceSchedules]
+where [AccountID]<>21119
+
+'--- End Old ZAK Import
+'=======================================
+

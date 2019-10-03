@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="RouteSheetDS" targetNamespace="http://tempuri.org/RouteSheetDS.xsd" xmlns:mstns="http://tempuri.org/RouteSheetDS.xsd"
+	xmlns="http://tempuri.org/RouteSheetDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop"
+	attributeFormDefault="qualified" elementFormDefault="qualified">
+	<xs:element name="RouteSheetDS" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="RouteSheets">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="OfficeId" type="xs:int" />
+							<xs:element name="RouteNo" type="xs:string" />
+							<xs:element name="StopNo" type="xs:string" />
+							<xs:element name="SID" type="xs:string" />
+							<xs:element name="AccountID" type="xs:string" />
+							<xs:element name="AccountName" type="xs:string" />
+							<xs:element name="LocationName" type="xs:string" />
+							<xs:element name="LocationId" type="xs:string" />
+							<xs:element name="AddressId" type="xs:string" />
+							<xs:element name="Address" type="xs:string" />
+							<xs:element name="Address2" type="xs:string" />
+							<xs:element name="City" type="xs:string" />
+							<xs:element name="State" type="xs:string" />
+							<xs:element name="ZipCode" type="xs:string" />
+							<xs:element name="Phone" type="xs:string" />
+							<xs:element name="Comments" type="xs:string" />
+							<xs:element name="StartDate" type="xs:string" />
+							<xs:element name="EndDate" type="xs:string" />
+							<xs:element name="DoorKey" type="xs:boolean" />
+							<xs:element name="BoxKey" type="xs:boolean" />
+							<xs:element name="Service" type="xs:string" />
+							<xs:element name="Package" type="xs:string" />
+							<xs:element name="Day" type="xs:string" />
+							<xs:element name="Print" type="xs:boolean" />
+							<xs:element name="UserLogon" type="xs:string" />
+							<xs:element name="LastUpdateDate" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

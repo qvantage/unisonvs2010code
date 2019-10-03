@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="ExpenseBreakdownDS" targetNamespace="http://tempuri.org/ExpenseBreakdownDS.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/ExpenseBreakdownDS.xsd"
+	xmlns:mstns="http://tempuri.org/ExpenseBreakdownDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="ExpenseBreakdownDS" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="ExpenseBreakdown">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="EmployeeId" type="xs:int" />
+							<xs:element name="FullName" type="xs:string" />
+							<xs:element name="PayrollStart" type="xs:dateTime" />
+							<xs:element name="PayrollDate" type="xs:dateTime" />
+							<xs:element name="Office" type="xs:string" />
+							<xs:element name="Company" type="xs:string" />
+							<xs:element name="Description" type="xs:string" />
+							<xs:element name="Quantity" type="xs:int" />
+							<xs:element name="Rate" type="xs:decimal" />
+							<xs:element name="Amount" type="xs:decimal" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

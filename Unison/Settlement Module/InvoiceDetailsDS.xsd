@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="InvoiceDetailsDS" targetNamespace="http://tempuri.org/InvoiceDetailsDS.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/InvoiceDetailsDS.xsd"
+	xmlns:mstns="http://tempuri.org/InvoiceDetailsDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="InvoiceDetailsDS" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="InvoiceDetailsView">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Invoice_No" type="xs:int" />
+							<xs:element name="CustomerID" type="xs:string" />
+							<xs:element name="Name" type="xs:string" />
+							<xs:element name="Invoice_Date" type="xs:dateTime" />
+							<xs:element name="Closing_Date" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Due_Date" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Total_Amount" type="xs:decimal" />
+							<xs:element name="LineNum" type="xs:int" />
+							<xs:element name="TranDate" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Charge_Code" type="xs:string" minOccurs="0" />
+							<xs:element name="Description" type="xs:string" />
+							<xs:element name="UnitPrice" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Prefix" type="xs:string" />
+							<xs:element name="Qty" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Suffix" type="xs:string" />
+							<xs:element name="Unit" type="xs:string" />
+							<xs:element name="Charge" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Tax" type="xs:string" />
+							<xs:element name="PlanID" type="xs:int" />
+							<xs:element name="MftRowID" type="xs:string" minOccurs="0" />
+							<xs:element name="MISCRowID" type="xs:int" minOccurs="0" />
+							<xs:element name="TrackingNum" type="xs:string" minOccurs="0" />
+							<xs:element name="RefNum" type="xs:string" minOccurs="0" />
+							<xs:element name="FromAddID" type="xs:int" minOccurs="0" />
+							<xs:element name="FromCustID" type="xs:string" minOccurs="0" />
+							<xs:element name="FromCustName" type="xs:string" minOccurs="0" />
+							<xs:element name="FromLocID" type="xs:string" minOccurs="0" />
+							<xs:element name="FromLocName" type="xs:string" minOccurs="0" />
+							<xs:element name="FromAdd1" type="xs:string" minOccurs="0" />
+							<xs:element name="FromAdd2" type="xs:string" minOccurs="0" />
+							<xs:element name="FromCity" type="xs:string" minOccurs="0" />
+							<xs:element name="FromState" type="xs:string" minOccurs="0" />
+							<xs:element name="FromZip" type="xs:string" minOccurs="0" />
+							<xs:element name="FromContact" type="xs:string" minOccurs="0" />
+							<xs:element name="FromPhone" type="xs:string" minOccurs="0" />
+							<xs:element name="FromEmail" type="xs:string" minOccurs="0" />
+							<xs:element name="ToAddID" type="xs:int" minOccurs="0" />
+							<xs:element name="ToCustID" type="xs:string" minOccurs="0" />
+							<xs:element name="ToCustName" type="xs:string" minOccurs="0" />
+							<xs:element name="ToLocID" type="xs:string" minOccurs="0" />
+							<xs:element name="ToLocName" type="xs:string" minOccurs="0" />
+							<xs:element name="ToAdd1" type="xs:string" minOccurs="0" />
+							<xs:element name="ToAdd2" type="xs:string" minOccurs="0" />
+							<xs:element name="ToCity" type="xs:string" minOccurs="0" />
+							<xs:element name="ToState" type="xs:string" minOccurs="0" />
+							<xs:element name="ToZip" type="xs:string" minOccurs="0" />
+							<xs:element name="ToContact" type="xs:string" minOccurs="0" />
+							<xs:element name="ToPhone" type="xs:string" minOccurs="0" />
+							<xs:element name="ToEmail" type="xs:string" minOccurs="0" />
+							<xs:element name="Weight" type="xs:decimal" minOccurs="0" />
+							<xs:element name="Pieces" type="xs:string" minOccurs="0" />
+							<xs:element name="SentBy" type="xs:string" minOccurs="0" />
+							<xs:element name="ParcelType" type="xs:string" minOccurs="0" />
+							<xs:element name="ServiceLevel" type="xs:string" minOccurs="0" />
+							<xs:element name="SpecialHandle" type="xs:string" minOccurs="0" />
+							<xs:element name="BillType" type="xs:string" minOccurs="0" />
+							<xs:element name="BillNum" type="xs:string" minOccurs="0" />
+							<xs:element name="DateTime" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="RowID" type="xs:string" minOccurs="0" />
+							<xs:element name="VOID" type="xs:string" minOccurs="0" />
+							<xs:element name="gToLocID" type="xs:string" minOccurs="0" />
+							<xs:element name="gToLocName" type="xs:string" minOccurs="0" />
+							<xs:element name="gToAdd1" type="xs:string" minOccurs="0" />
+							<xs:element name="gToAdd2" type="xs:string" minOccurs="0" />
+							<xs:element name="gToCity" type="xs:string" minOccurs="0" />
+							<xs:element name="gToState" type="xs:string" minOccurs="0" />
+							<xs:element name="gToZip" type="xs:string" minOccurs="0" />
+							<xs:element name="gToPhone" type="xs:string" minOccurs="0" />
+							<xs:element name="gToAddID" type="xs:int" minOccurs="0" />
+							<xs:element name="gToCustID" type="xs:string" minOccurs="0" />
+							<xs:element name="gDLOfficeID" type="xs:string" minOccurs="0" />
+							<xs:element name="gDLOffice" type="xs:string" minOccurs="0" />
+							<xs:element name="DLOfficeID" type="xs:string" minOccurs="0" />
+							<xs:element name="DLOffice" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,3 @@
+SELECT REPLICATE('0', 4 - len(id)) + id AS newID, ID
+FROM ROUTES
+

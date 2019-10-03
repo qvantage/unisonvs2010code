@@ -1,0 +1,17 @@
+Formula to decide between 19xx and 20xx:
+=========================================
+(A MOD 50)*(1900+A) + ((100-A) MOD 50) * ((A-20)+2000)
+
+
+Formula to remove after comma from a string:
+=============================================
+chrInd = CHARINDEX(',', CityName)
+((len - chrInd) MOD len) * len + chrInd -1 = B
+
+substring(fld, 1, B)
+
+Break Fields into records:
+==========================
+Use 'Union ALL'
+
+

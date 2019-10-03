@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<xs:schema id="smInvoiceDetailsDS" 
+                  targetNamespace="http://tempuri.org/smInvoiceDetailsDS.xsd"
+                  elementFormDefault="qualified"
+                  attributeFormDefault="qualified"
+                  xmlns="http://tempuri.org/smInvoiceDetailsDS.xsd"
+                  xmlns:mstns="http://tempuri.org/smInvoiceDetailsDS.xsd"
+                  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                  xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="smInvoiceDetailsDS" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded"></xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

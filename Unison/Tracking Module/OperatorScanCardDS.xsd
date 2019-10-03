@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<xs:schema id="OperatorScanCardDS" 
+                  targetNamespace="http://tempuri.org/OperatorScanCardDS.xsd"
+                  elementFormDefault="qualified"
+                  attributeFormDefault="qualified"
+                  xmlns="http://tempuri.org/OperatorScanCardDS.xsd"
+                  xmlns:mstns="http://tempuri.org/OperatorScanCardDS.xsd"
+                  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                  xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="OperatorScanCardDS" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="ExpenseBreakdown">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="OperatorBarcode" type="xs:string" />
+							<xs:element name="OperatorName" type="xs:string" />
+							<xs:element name="Office" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
